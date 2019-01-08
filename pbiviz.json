@@ -1,7 +1,7 @@
 {
   "visual": {
-    "name": "drilldownChoropleth",
-    "displayName": "Drilldown choropleth",
+    "name": "drilldownnplmap",
+    "displayName": "Drilldown NPL Map",
     "guid": "choropleth4C77906D867C4C09AFE83BA5E2AA106A",
     "visualClassName": "Visual",
     "version": "1.0.2",

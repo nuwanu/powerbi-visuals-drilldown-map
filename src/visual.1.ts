@@ -239,98 +239,20 @@ module powerbi.extensibility.visual {
                     }
                 }
                 legend_data.forEach(function (i, d) {
-                    console.log(i)
-                    if(i == "0-25%"){
-                        let defaultColor: Fill = {
-                            solid: {
-                                color: '#FA8072'
-                            }
+                    let defaultColor: Fill = {
+                        solid: {
+                            color: colorPalette.getColor(d + '').value
                         }
-                        ldata.push({
-                            label: i,
-                            color: getCategoricalObjectValue<Fill>(categories[0], d, 'ordinalcolors', 'datacolor', defaultColor).solid.color,
-                            identity: host.createSelectionIdBuilder()
-                                .withCategory(categories[0], d)
-                                .createSelectionId(),
-                            icon: LegendIcon.Box,
-                            selected: false,
-                        })
-                    }else if(i == "25-50%"){
-                        let defaultColor: Fill = {
-                            solid: {
-                                color: '#FFA500'
-                            }
-                        }
-                        ldata.push({
-                            label: i,
-                            color: getCategoricalObjectValue<Fill>(categories[0], d, 'ordinalcolors', 'datacolor', defaultColor).solid.color,
-                            identity: host.createSelectionIdBuilder()
-                                .withCategory(categories[0], d)
-                                .createSelectionId(),
-                            icon: LegendIcon.Box,
-                            selected: false,
-                        })
-                    }else if(i == "50-75%"){
-                        let defaultColor: Fill = {
-                            solid: {
-                                color: '#3CB371'
-                            }
-                        }
-                        ldata.push({
-                            label: i,
-                            color: getCategoricalObjectValue<Fill>(categories[0], d, 'ordinalcolors', 'datacolor', defaultColor).solid.color,
-                            identity: host.createSelectionIdBuilder()
-                                .withCategory(categories[0], d)
-                                .createSelectionId(),
-                            icon: LegendIcon.Box,
-                            selected: false,
-                        })
-                    }else if(i == "75-100%"){
-                        let defaultColor: Fill = {
-                            solid: {
-                                color: '#00FFFF'
-                            }
-                        }
-                        ldata.push({
-                            label: i,
-                            color: getCategoricalObjectValue<Fill>(categories[0], d, 'ordinalcolors', 'datacolor', defaultColor).solid.color,
-                            identity: host.createSelectionIdBuilder()
-                                .withCategory(categories[0], d)
-                                .createSelectionId(),
-                            icon: LegendIcon.Box,
-                            selected: false,
-                        })
-                    }else if(i == "No Value"){
-                        let defaultColor: Fill = {
-                            solid: {
-                                color: '#00008B'
-                            }
-                        }
-                        ldata.push({
-                            label: i,
-                            color: getCategoricalObjectValue<Fill>(categories[0], d, 'ordinalcolors', 'datacolor', defaultColor).solid.color,
-                            identity: host.createSelectionIdBuilder()
-                                .withCategory(categories[0], d)
-                                .createSelectionId(),
-                            icon: LegendIcon.Box,
-                            selected: false,
-                        })
-                    }else if(i == null){
-                        let defaultColor: Fill = {
-                            solid: {
-                                color: '#478DF6'
-                            }
-                        }
-                        ldata.push({
-                            label: i,
-                            color: getCategoricalObjectValue<Fill>(categories[0], d, 'ordinalcolors', 'datacolor', defaultColor).solid.color,
-                            identity: host.createSelectionIdBuilder()
-                                .withCategory(categories[0], d)
-                                .createSelectionId(),
-                            icon: LegendIcon.Box,
-                            selected: false,
-                        })
                     }
+                    ldata.push({
+                        label: i,
+                        color: getCategoricalObjectValue<Fill>(categories[0], d, 'ordinalcolors', 'datacolor', defaultColor).solid.color,
+                        identity: host.createSelectionIdBuilder()
+                            .withCategory(categories[0], d)
+                            .createSelectionId(),
+                        icon: LegendIcon.Box,
+                        selected: false,
+                    })
                 })
             }
 

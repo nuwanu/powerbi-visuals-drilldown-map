@@ -28,7 +28,7 @@
     "@types/d3": "3.5.36",
     "@types/jquery": "2.0.43",
     "@types/lodash": "4.14.52",
-    "d3": "3.5.17",
+    "d3": "^3.5.5",
     "lodash": "4.17.4",
     "powerbi-visuals-tools": "1.7.0",
     "powerbi-visuals-utils-chartutils": "0.3.0",
