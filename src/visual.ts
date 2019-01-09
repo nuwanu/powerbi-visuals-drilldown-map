@@ -316,6 +316,7 @@ module powerbi.extensibility.visual {
                             selected: false,
                         })
                     }else if(i == null){
+                        console.log("NULL")
                         let defaultColor: Fill = {
                             solid: {
                                 color: '#478DF6'
